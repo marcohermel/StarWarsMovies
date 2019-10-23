@@ -1,0 +1,28 @@
+@import "./../../style/flex.scss";
+$panelColor: #ffe300;
+
+.panel {
+    @include flexCenter(column);
+    margin: 20px 0;
+
+  header>h1 {
+    color: $panelColor;
+    font-weight: bold;
+  }
+  .panel-body {
+    @include flexCenter(column);
+    border: 1px solid $panelColor;
+    padding: 40px 40px;
+    margin: 20px 20px;
+    border-radius: 20px;
+  }
+  .panel-body-flex-row {
+    @extend .panel-body; 
+    flex-direction: row;
+
+  }
+  .panel-body-flex-column {
+    @extend .panel-body; 
+    flex-direction: column;
+  }
+}

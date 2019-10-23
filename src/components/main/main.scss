@@ -1,0 +1,26 @@
+@import "./../../style/flex.scss";
+
+main {
+  @include flexCenter(column);
+  height: 100%;
+}
+
+.films {
+  flex-basis: 250px;
+  @include flexCenter(column);
+
+  .img50 {
+    height: 50px;
+  }
+
+  .img100 {
+    height: 100px;
+  }
+  a {
+    margin: 10px 0;
+    font-weight: bold;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
