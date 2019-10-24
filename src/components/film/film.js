@@ -1,51 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-// import Character from '../character';
+import { Link } from 'react-router-dom';
 import { getFilm } from '../../services/apiService';
 import Panel from '../panel';
 import './film.scss';
 import Information from '../information';
+import Loader from '../loader';
+import { romanize, formatDate } from '../../common/formater';
 
 export default function Film({ match }) {
   const [film, setFilm] = useState({});
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     async function loadFilm() {
       const filmDetails = await getFilm(match.params.id);
       setFilm(filmDetails);
+      setLoad(false);
     }
     loadFilm();
   }, [match.params.id]);
 
   return (
-    <Panel title={film.title}>
-      <ul>
-        <li>
-          <Panel title="Opening Craw">
-            {film.opening_crawl}
+    <main>
+      {load
+        ? <Loader />
+        : (
+          <Panel title={film.title} alignStart>
+            <Information title="Opening Craw" content={film.opening_crawl} />
+            <Information title="Episode" content={romanize(film.episode_id)} />
+            <Information title="Director" content={film.director} />
+            <Information title=" Producer" content={film.producer} />
+            <Information title="Release date" content={formatDate(film.release_date)} />
+            <Link className="return" to="/">Return</Link>
           </Panel>
-        </li>
-        <li>
-          <Information title="Episode" content={film.episode_id} />
-        </li>
-        <li>
-          <Information title="Director" content={film.director} />
-        </li>
-        <li>
-          <Information title=" Producer" content={film.producer} />
-        </li>
-        <li>
-          <Information title="Release date" content={film.release_date} />
-        </li>
-      </ul>
-      {/* <Panel title="Characters">
-        {
-         (film.characters)
-           ? film.characters.map((link) => <Character key={link} link={link} />)
-           : null
-      }
-      </Panel> */}
-    </Panel>
+        )}
+    </main>
   );
 }
 

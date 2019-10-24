@@ -1,3 +1,5 @@
+@import "./style/flex.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +9,41 @@
 
 html,
 body,
-#root {
+main {
+  @include flexCenter(column);
   height: 100%;
+  margin: 0px 0px;
 }
 
+$color: #fff;
+$linkHover: silver;
+$backgroundColor:#000;
+
+@font-face {
+  font-family: 'Cinzel';
+  font-weight: bold;
+  src: local('Cinzel'),  url('./assets/fonts/Cinzel-Regular.otf') format('opentype'), /* Safari, Android, iOS */
+}
+
+
 body {
-  color: #c8c8c8;
-  background: #000;
-  font-family: "Archivo Narrow", sans-serif;
+  background-image: url('./assets/stars.jpg') !important;
+  background-repeat: repeat;
+  color: $color;
+  background: $backgroundColor;
+  font-size: large;
+  font-family: 'Cinzel', Arial, Helvetica, sans-serif;
   a {
-    color: silver;
-  }
-  a:active {
-    color: silver;
+    color: $color;
+    margin: 10px 0;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      color: $linkHover;
+    }
+    &:active {
+    color: $color;
+    }
   }
   li {
     list-style-type: none;

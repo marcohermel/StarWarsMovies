@@ -1,4 +1,10 @@
-.informationTitle {
-  font-weight: bold;
-  margin-right: 5px;
+.information {
+  margin-bottom: 25px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  .title {
+    font-weight: bold;
+    color:#ffe300;
+  }
 }

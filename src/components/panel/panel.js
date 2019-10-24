@@ -3,13 +3,23 @@ import React from 'react';
 import './panel.scss';
 import PropTypes from 'prop-types';
 
-export default function Panel({ children, title, flexRow }) {
+export default function Panel({
+  children,
+  title,
+  flexRow,
+  alignStart,
+  fontHeaderJedi,
+}) {
   return (
     <div className="panel">
-      <header>
+      <header className={fontHeaderJedi ? 'fontJedi' : ''}>
         <h1>{title}</h1>
       </header>
-      <div className={flexRow ? 'panel-body-flex-row' : 'panel-body-flex-column'}>
+      <div className={`panel-body 
+            ${flexRow ? 'flex-row' : ''}
+            ${alignStart ? 'alignStart' : ''}
+             `}
+      >
         {children}
       </div>
     </div>
@@ -18,9 +28,13 @@ export default function Panel({ children, title, flexRow }) {
 Panel.defaultProps = {
   title: '',
   flexRow: false,
+  alignStart: false,
+  fontHeaderJedi: false,
 };
 Panel.propTypes = {
+  fontHeaderJedi: PropTypes.bool,
   flexRow: PropTypes.bool,
+  alignStart: PropTypes.bool,
   title: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

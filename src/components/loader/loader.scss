@@ -1,0 +1,32 @@
+@import "../../style/flex.scss";
+
+$loaderTotalColor: #000;
+$loaderRatateColor: #4bd5ee;
+$loaderMessageText: #4bd5ee;
+
+.loader {
+  @include flexCenter(column);
+  .loaderText {
+    font-size: 40px;
+    color: $loaderMessageText;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .loaderAnimation {
+    border: 5px solid $loaderTotalColor;
+    border-top: 5px solid $loaderRatateColor;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 200px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
