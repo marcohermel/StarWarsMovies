@@ -1,6 +1,10 @@
 @import "./../../style/flex.scss";
 
 .film {
+    @include flexCenter(column);
+
+    flex-basis: 250px;
+
     .episode{
         text-align: center;
         border-top: 1px solid;
@@ -8,13 +12,12 @@
         margin-bottom: 5px;
         padding: 0px 10px;
     }
+
     .filmTitle{
         text-align: center;
         font-size: 0.6em;
     }
-    flex-basis: 250px;
-    @include flexCenter(column);
-  
+
     .img50 {
       height: 50px;
     }

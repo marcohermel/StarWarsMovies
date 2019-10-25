@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { getFilms } from '../../services/filmService';
-import Panel from '../panel';
-import './main.scss';
-import FilmLink from '../filmLink/filmLink';
+import Panel from '../../components/panel';
+import FilmLink from '../../components/filmLink';
 import { LoaderContext } from '../../context/loaderContext';
-
+import Loader from '../../components/loader';
 
 export default function Main() {
   const [films, setFilms] = useState([]);
@@ -19,12 +18,13 @@ export default function Main() {
     });
   }, []);
 
-  return (loaderContext.isLoading ? null
-    : (
+  return (
+    <Loader>
       <main>
         <Panel title="Star wars" flexRow fontHeaderJedi>
           {films.map((film) => <FilmLink key={film.episode_id} film={film} />)}
         </Panel>
       </main>
-    ));
+    </Loader>
+  );
 }

@@ -6,6 +6,7 @@ $loaderMessageText: #4bd5ee;
 
 .loader {
   @include flexCenter(column);
+
   .loaderText {
     font-size: 40px;
     color: $loaderMessageText;
@@ -22,6 +23,7 @@ $loaderMessageText: #4bd5ee;
     margin-bottom: 200px;
   }
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

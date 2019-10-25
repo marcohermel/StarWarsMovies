@@ -1,51 +1,40 @@
 @import "./style/flex.scss";
+@import "./style/fonts.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
-html,
-body,
-main {
+html {
   @include flexCenter(column);
   height: 100%;
   margin: 0px 0px;
-}
 
-$color: #fff;
-$linkHover: silver;
-$backgroundColor:#000;
-
-@font-face {
-  font-family: 'Cinzel';
-  font-weight: bold;
-  src: local('Cinzel'),  url('./assets/fonts/Cinzel-Regular.otf') format('opentype'), /* Safari, Android, iOS */
-}
-
-
-body {
-  background-image: url('./assets/stars.jpg') !important;
-  background-repeat: repeat;
-  color: $color;
-  background: $backgroundColor;
-  font-size: large;
-  font-family: 'Cinzel', Arial, Helvetica, sans-serif;
-  a {
+  body {  
+    $color: #fff;
+    $linkHover: silver;
+    $backgroundColor: #000;
+    background-image: url("./assets/stars.jpg") !important;
+    background-repeat: repeat;
     color: $color;
-    margin: 10px 0;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      color: $linkHover;
+    background: $backgroundColor;
+    font-size: large;
+    font-family: "Cinzel", Arial, Helvetica, sans-serif;
+
+    a {
+      color: $color;
+      margin: 10px 0;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: $linkHover;
+      }
+      &:active {
+        color: $color;
+      }
     }
-    &:active {
-    color: $color;
+
+    li {
+      list-style-type: none;
     }
+    
   }
-  li {
-    list-style-type: none;
 }
-}
+
+

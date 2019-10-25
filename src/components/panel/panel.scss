@@ -1,31 +1,20 @@
 @import "./../../style/flex.scss";
+
 $panelColor: #fff;
 $headerColor: #ffe300;
-
-@font-face {
-  font-family: "Star Jedi";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Star Jedi"),
-    url("../../assets/fonts/Starjedi.ttf") format("truetype"); /* Safari, Android, iOS */
-}
-@font-face {
-  font-family: "Cinzel";
-  font-weight: bold;
-  src: local("Cinzel"),
-    url("../../assets/fonts/Cinzel-Regular.otf") format("opentype"); /* Safari, Android, iOS */
-}
 
 .panel {
   @include flexCenter(column);
   margin: 20px 0;
   max-width: 1200px;
 
-  header h1 {
-    color: $headerColor;
-  }
+  header{
+    h1 {
+      color: $headerColor;
+    }
+  } 
 
-  header.fontJedi h1 {
+  header.fontJedi {
     font-family: "Star Jedi", Arial, Helvetica, sans-serif !important;
   }
 
@@ -36,10 +25,13 @@ $headerColor: #ffe300;
     margin: 20px 20px;
     border-radius: 20px;
   }
+
   .flex-row {
     flex-direction: row;
   }
+
   .alignStart {
     align-items: flex-start;
   }
 }
+

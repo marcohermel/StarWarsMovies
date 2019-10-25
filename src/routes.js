@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Main from './components/main';
-import Film from './components/film';
+import Main from './pages/main';
+import Film from './pages/film';
 
 export default function Routes() {
   return (
