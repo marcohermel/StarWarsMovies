@@ -2,9 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
+
 describe('<App />', () => {
-  it('renders without crashing', () => {
-    const component = shallow(<App />);
-    expect(component.find('div')).toHaveLength(1);
+  it('Renders without crashing', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('Routes')).toHaveLength(1);
   });
 });

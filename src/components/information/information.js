@@ -7,7 +7,7 @@ export default function Information({ title, content }) {
   return (
     <div className="information">
       <span className="title">{`${title}: `}</span>
-      {content}
+      <span className="content">{content}</span>
     </div>
   );
 }

@@ -9,7 +9,7 @@ import './filmLink.scss';
 export default function FilmLink({ film }) {
   const id = parseInt(film.url.match(/\d+/g).map(Number), 10);
   return (
-    <article className="films">
+    <article className="film">
       <img src={logo} className="img100" alt="logo" />
       <img src={faixa} className="img50" alt="faixa" />
       <Link to={`/film/${id}`}>
