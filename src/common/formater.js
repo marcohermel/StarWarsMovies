@@ -1,9 +1,10 @@
 
 export function formatDate(dateString) {
   const date = new Date(dateString);
-  let day = date.getDate();
-  day = day.length === 1 ? `0${day}` : day;
-  const month = date.getMonth() + 1;
+  let day = date.getDate() + 1;
+  day = day.toString().length === 1 ? `0${day}` : day;
+  let month = date.getMonth() + 1;
+  month = month.toString().length === 1 ? `0${month}` : month;
   const year = date.getFullYear();
 
   return `${day}/${month}/${year}`;

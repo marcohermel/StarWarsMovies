@@ -1,16 +1,14 @@
-
- @font-face {
-    font-family: "Star Jedi";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Star Jedi"),
-      url("../assets/fonts/Starjedi.ttf") format("truetype");
-    }
+@font-face {
+  font-family: "Star Jedi";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Star Jedi"),
+    url("../assets/fonts/Starjedi.ttf") format("truetype");
+}
 
 @font-face {
-    font-family: "Cinzel";
-    font-weight: bold;
-    src: local("Cinzel"),
-      url("../assets/fonts/Cinzel-Regular.otf") format("opentype"); /* Safari, Android, iOS */
-  }
-  
+  font-family: "Cinzel";
+  font-weight: bold;
+  src: local("Cinzel"),
+    url("../assets/fonts/Cinzel-Regular.otf") format("opentype"); /* Safari, Android, iOS */
+}

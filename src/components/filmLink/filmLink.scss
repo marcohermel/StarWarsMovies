@@ -1,28 +1,28 @@
 @import "./../../style/flex.scss";
 
 .film {
-    @include flexCenter(column);
+  @include flexCenter(column);
 
-    flex-basis: 250px;
+  flex-basis: 250px;
 
-    .episode{
-        text-align: center;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        margin-bottom: 5px;
-        padding: 0px 10px;
-    }
-
-    .filmTitle{
-        text-align: center;
-        font-size: 0.6em;
-    }
-
-    .img50 {
-      height: 50px;
-    }
-  
-    .img100 {
-      height: 100px;
-    }
+  .episode {
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+    padding: 0px 10px;
   }
+
+  .filmTitle {
+    text-align: center;
+    font-size: 0.6em;
+  }
+
+  .img50 {
+    height: 50px;
+  }
+
+  .img100 {
+    height: 100px;
+  }
+}
