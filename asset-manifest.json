@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.39aa525f.chunk.css",
-    "main.js": "./static/js/main.202a0c71.chunk.js",
-    "main.js.map": "./static/js/main.202a0c71.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.888d6fc2.js",
-    "runtime-main.js.map": "./static/js/runtime-main.888d6fc2.js.map",
-    "static/js/2.f2b987ea.chunk.js": "./static/js/2.f2b987ea.chunk.js",
-    "static/js/2.f2b987ea.chunk.js.map": "./static/js/2.f2b987ea.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.fa202bd8856b66cb9ab275a5877a5ce9.js": "./precache-manifest.fa202bd8856b66cb9ab275a5877a5ce9.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.39aa525f.chunk.css.map": "./static/css/main.39aa525f.chunk.css.map",
-    "static/media/App.scss": "./static/media/stars.435cade8.jpg",
-    "static/media/faixa.svg": "./static/media/faixa.a177ec33.svg",
-    "static/media/logo.svg": "./static/media/logo.9b965feb.svg"
+    "main.css": "/StarWarsMovies/static/css/main.fef72f5f.chunk.css",
+    "main.js": "/StarWarsMovies/static/js/main.202a0c71.chunk.js",
+    "main.js.map": "/StarWarsMovies/static/js/main.202a0c71.chunk.js.map",
+    "runtime-main.js": "/StarWarsMovies/static/js/runtime-main.1cca035a.js",
+    "runtime-main.js.map": "/StarWarsMovies/static/js/runtime-main.1cca035a.js.map",
+    "static/js/2.f2b987ea.chunk.js": "/StarWarsMovies/static/js/2.f2b987ea.chunk.js",
+    "static/js/2.f2b987ea.chunk.js.map": "/StarWarsMovies/static/js/2.f2b987ea.chunk.js.map",
+    "index.html": "/StarWarsMovies/index.html",
+    "precache-manifest.bb1e2f68d4d01c26847471da608ff888.js": "/StarWarsMovies/precache-manifest.bb1e2f68d4d01c26847471da608ff888.js",
+    "service-worker.js": "/StarWarsMovies/service-worker.js",
+    "static/css/main.fef72f5f.chunk.css.map": "/StarWarsMovies/static/css/main.fef72f5f.chunk.css.map",
+    "static/media/App.scss": "/StarWarsMovies/static/media/stars.435cade8.jpg",
+    "static/media/faixa.svg": "/StarWarsMovies/static/media/faixa.a177ec33.svg",
+    "static/media/logo.svg": "/StarWarsMovies/static/media/logo.9b965feb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.888d6fc2.js",
+    "static/js/runtime-main.1cca035a.js",
     "static/js/2.f2b987ea.chunk.js",
-    "static/css/main.39aa525f.chunk.css",
+    "static/css/main.fef72f5f.chunk.css",
     "static/js/main.202a0c71.chunk.js"
   ]
 }
